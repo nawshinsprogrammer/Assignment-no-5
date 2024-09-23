@@ -9,6 +9,7 @@ document.getElementById('donate-amount')
       newBalance=navAmount-inputAmount
      
      document.getElementById('nav-amount').innerText=newBalance
+     alert('successfully!Done')
     }
     
     else{
@@ -29,6 +30,7 @@ document.getElementById('donate-amount1')
       newBalance=navAmount-inputAmount
      
      document.getElementById('nav-amount').innerText=newBalance
+     alert('successfully!Done')
     }
     
     else{
@@ -47,12 +49,21 @@ document.getElementById('donate-amount2')
       newBalance=navAmount-inputAmount
      
      document.getElementById('nav-amount').innerText=newBalance
+     alert('successfully!Done')
     }
     
     else{
       alert('your account does not have enough balance')
     }
-    
+
+    const historyItem =document.createElement("div");
+      historyItem.className = "bg-white p-3 rounded-md border";
+      historyItem.innerHtml=`
+      <p>inputAmount:$${inputAmount}</p>
+      <p class="text-xs text-gray-500">${newDate().toLocalDateString()}</p>
+      `
+    const historyContainer =document.getElementById('history-section');
+    historyContainer.insertBefore(historyItem,historyContainer.firstChild);
 })
 
   // history tab
@@ -63,8 +74,19 @@ document.getElementById('donate-amount2')
     historyTab.classList.add('text-2xl','font-bold','bg-lime-400')
     donationTab.classList.remove('text-2xl','font-bold','bg-lime-400')
     document.getElementById('main-id').classList.add('hidden')
+    document.getElementById('history-section').classList.remove('hidden')
+
+    
   })
 
+  document.getElementById('donation-tab').addEventListener('click',function(){
+   
+    donationTab.classList.add('main-id');
+  })
  
+  document.getElementById('blog-id').addEventListener('click',function(){
+    window.location.href ='./blog.html'
+
+  })
 
   
