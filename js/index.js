@@ -54,3 +54,9 @@ document.getElementById('donate-amount2')
     }
     
 })
+
+  // history tab
+  const historyTab =document.getElementById('history-tab')
+  historyTab.addEventListener('click',function(){
+    historyTab.classList.add('text-2xl','font-bold','btn btn-wide','bg-lime-400')
+  })
