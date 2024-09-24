@@ -9,15 +9,16 @@ document.getElementById('donate-amount')
       newBalance=navAmount-inputAmount
      
      document.getElementById('nav-amount').innerText=newBalance
+     
    
     }
     
     else{
-      alert('It is not valid')
-      
+      alert('It is not valid')}
+     
+    
 
-    }
-
+    
     document.getElementById('my_modal_5').showModal()
 
     const historyItem =document.createElement("div");
