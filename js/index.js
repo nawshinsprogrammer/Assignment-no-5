@@ -1,25 +1,29 @@
 document.getElementById('donate-amount')
 .addEventListener('click',function(){
     const inputAmount =parseFloat(document.getElementById('input-amount').value)
+    
     const bdtAmount =parseFloat(document.getElementById('bdt-amount').innerText)
       document.getElementById('bdt-amount').innerText=inputAmount
   
-    if(inputAmount>0){
+    
+      if(isNaN(inputAmount)||inputAmount<1){
+        alert('it is not valid')
+        return
+      }
+   
+    
+    
+  
       const navAmount =parseFloat(document.getElementById('nav-amount').innerText)
       newBalance=navAmount-inputAmount
      
      document.getElementById('nav-amount').innerText=newBalance
      
-   
-    }
-    
-    else{
-      alert('It is not valid')}
      
     
-
-    
     document.getElementById('my_modal_5').showModal()
+    
+   
 
     const historyItem =document.createElement("div");
       historyItem.className = "bg-white p-3 rounded-md border";
@@ -34,24 +38,25 @@ document.getElementById('donate-amount')
 })
 
 
+
 document.getElementById('donate-amount1')
 .addEventListener('click',function(){
     const inputAmount =parseFloat(document.getElementById('input-amount1').value)
     const bdtAmount =parseFloat(document.getElementById('bdt-amount1').innerText)
       document.getElementById('bdt-amount1').innerText=inputAmount
   
-    if(inputAmount>0){
-      const navAmount =parseFloat(document.getElementById('nav-amount').innerText)
-      newBalance=navAmount-inputAmount
-     
-     document.getElementById('nav-amount').innerText=newBalance
-     
-    }
-    
-    else{
-      alert('It is not valid')
-    }
+    if(isNaN(inputAmount)||inputAmount<1){
       
+      alert('It is not valid')
+      return
+    
+    }
+   
+    const navAmount =parseFloat(document.getElementById('nav-amount').innerText)
+    newBalance=navAmount-inputAmount
+   
+   document.getElementById('nav-amount').innerText=newBalance
+   
 
       
 
@@ -80,17 +85,20 @@ document.getElementById('donate-amount2')
     const bdtAmount =parseFloat(document.getElementById('bdt-amount2').innerText)
       document.getElementById('bdt-amount2').innerText=inputAmount
   
-    if(inputAmount>0){
-      const navAmount =parseFloat(document.getElementById('nav-amount').innerText)
+    if(isNaN(inputAmount)||inputAmount<1){
+      alert('It is not valid')
+      return
+    }
+    
+    
+    
+    
+
+    const navAmount =parseFloat(document.getElementById('nav-amount').innerText)
       newBalance=navAmount-inputAmount
      
      document.getElementById('nav-amount').innerText=newBalance
-  
-    }
-    
-    else{
-     alert('It is not valid')
-    }
+     
     document.getElementById('my_modal_5').showModal()
 
 
