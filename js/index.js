@@ -51,7 +51,9 @@ document.getElementById('donate-amount1')
     else{
       alert('It is not valid')
     }
+      
 
+      
 
     document.getElementById('my_modal_5').showModal()
 
